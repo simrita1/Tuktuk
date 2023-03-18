@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.error {
+    color: tomato;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border-bottom: 1px solid rgb(230, 230, 230); */
+    background-color: #8186ab;
+    background-image: linear-gradient(315deg, #d077bb 0%, #67b2dd 74%);
+    box-shadow: 0px 2px 10px rgba(134, 55, 231, 0.3);
+    /* align-items: center; */
+}
+
+header .nav-1,
+.nav-2 {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+header .nav-1 .logo {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    /* flex: 1; */
+    margin-right: 5rem;
+    color: white;
+
+}
+
+header .nav-1 .company-info-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-1 .company-info-menu li a {
+    padding: 0.5rem 1rem;
+}
+
+header .nav-1 .user-info-menu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header .nav-1 .user-info-menu li a {
+    padding: 0.5rem 1rem;
+}
+
+header .nav-2 .nav-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.9rem;
+}
+
+header .nav-2 .nav-categories li a {
+    padding: 0.5rem 1rem;
+}
+
+header .nav-2 .nav-categories li a:nth-child(1) {
+    padding-left: 0;
+}
+
+header .nav-2 .search-bar {
+    display: flex;
+    margin-bottom: 0.9rem;
+    margin-right: 3rem;
+    justify-content: flex-end;
+    flex: 1;
+    position: relative;
+}
+
+header .nav-2 .search-bar .search {
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    padding: 0 1.5rem;
+}
+
+header .nav-2 .search-bar .search-btn {
+    background: none;
+    position: absolute;
+    border: none;
+    color: rgb(90, 90, 90);
+    top: 0.5rem;
+    right: 1rem;
+}
+
+header .nav-2 .search-bar .search-btn i {
+    font-size: 1.5rem;
+}
+
+
+.user-info-menu .user {
+    margin-right: 5rem;
+    padding: 0.8rem 0.8rem;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    /* border-radius: 0.5rem; */
+}
+
+.user-info-menu .login {
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    margin-right: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.user-info-menu .login:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: rgb(83, 83, 83);
+}
+
+.user-info-menu .signup {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 2px solid white;
+    color: rgb(83, 83, 83);
+    transition: all 0.2s ease;
+}
+
+.user-info-menu .signup:hover {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.user-info-menu .user-options {
+    position: absolute;
+    top: 2.8rem;
+    left: -8rem;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    width: 200px;
+    /* border-radius: 0.5rem; */
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.user-info-menu .user-options a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.user-info-menu .user-options a:hover {
+    background-color: rgb(187, 185, 185);
+}
+
+.user-info-menu .user:hover .user-options {
+    display: flex;
+}
+
+/*  home page*/
+.home {
+    width: 70%;
+}
+
+.home-content {
+    padding: 1rem 0;
+}
+
+.home-content .create-post {
+    margin: 1rem 1rem;
+
+}
+
+.home-content .create-post a {
+    background-color: rgb(141, 84, 195);
+    padding: 0.8rem 1rem;
+}
+
+.home-content .home-cards {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* background-color: rgb(231, 231, 231); */
+}
+
+.home-content .home-cards a {
+    margin: 0.5rem 0.7rem;
+    width: 17rem;
+    height: 26rem;
+    border-radius: 0.8rem;
+    color: rgb(83, 83, 83);
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.home-content .home-cards a:hover {
+    transform: translate(1.1, 1.1);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .home-cards a .card-img {
+    width: 18rem;
+    height: 12rem;
+}
+
+.home-content .home-cards a .card-img img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.home-content .home-cards a .card-content {
+    padding: 0.5rem 1rem;
+}
+
+.home-content .home-cards a .card-content .category {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.home-content .home-cards a .card-content .category .category-tag {
+    /* color: rgb(67, 67, 255); */
+    color: rgb(85, 84, 84);
+    border: 0;
+    background-color: rgb(199, 199, 199);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.home-content .home-cards a .card-content .title {
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    height: 3.3rem;
+    overflow: hidden;
+}
+
+.home-content .home-cards a .card-content .description {
+    font-size: 0.8rem;
+    height: 2.9rem;
+    overflow: hidden;
+}
+
+.home-content .home-cards a .card-content .readmore {
+    margin-top: 1rem;
+}
+
+.home-content .home-cards a .card-content .readmore .readmore-btn {
+    background-color: #82a5ef;
+    background-image: linear-gradient(315deg, #e488e6 0%, #6578c8 74%);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 0;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.main {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    padding: 1rem 0;
+}
+
+.main .side-news {
+    width: 30%;
+}
+
+.main .news {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+}
+
+.main .news-cards {
+    margin-left: 1rem;
+}
+
+.main .news-cards a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color: rgb(83, 83, 83);
+    /* border-radius: 0.5rem; */
+    font-weight: bolder;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    transition: all 0.2s ease;
+}
+
+/* .main .news-cards a .news-img {
+    width: 50%;
+    height: 50%;
+} */
+
+.main .news-cards .news-img img {
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    border-radius: 0.5rem;
+    margin-right: 0rem;
+    /* object-fit: contain; */
+}
+
+.main .news-cards a div {
+    padding: 0.3rem 0.5rem;
+}
+
+.main .news-cards a:hover {
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* info page */
+
+.info-page {
+    width: 70%;
+    height: 100%;
+    margin: 1.5rem auto;
+}
+
+.info-page .info-title {
+    font-weight: bolder;
+    font-size: 2.3rem;
+    color: rgb(83, 83, 83);
+}
+
+.info-page .info-posted-by {
+    padding: 1rem 0;
+    color: rgb(105, 105, 105);
+}
+
+.info-page .info-posted-on {
+    color: rgb(105, 105, 105);
+    padding-bottom: 0.7rem;
+}
+
+.info-page .info-img {
+    width: 100%;
+    height: 75%;
+    margin: 1rem 0;
+}
+
+.info-page .info-img img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.info-page .info-desc {
+    font-size: 1.2rem;
+    color: rgb(83, 83, 83);
+}
+
+.info-page .actions {
+    border-top: 1px solid rgb(170, 170, 170);
+    margin-top: 1rem;
+    padding: 1rem 0;
+    color: rgb(83, 83, 83);
+    height: 5rem;
+}
+
+.info-page .actions .action-list {
+    margin: 1rem 0;
+}
+
+.info-page .actions a.edit {
+    padding: 0.5rem 1rem;
+    background-color: rgb(214, 106, 185);
+    margin-right: 1rem;
+}
+
+.info-page .actions a.delete {
+    padding: 0.5rem 1rem;
+    background-color: rgb(249, 179, 144);
+    margin-top: 1rem;
+}
+
+/* footer section home page */
+.footer {
+    background-color: #de83ca;
+    background-image: linear-gradient(315deg, #67b2dd 35%, #d077bb 100%);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.footer-nav li {
+    margin-bottom: 1rem;
+}
+
+/* music page */
+.cat-title {
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 1rem;
+    color: rgb(83, 83, 83);
+}
+
+/* login and signup styles */
+
+.login-register-page {
+    background-color: white;
+    width: 50%;
+    margin: 1.5rem auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0.5rem;
+}
+
+.login-register-page h1 {
+    font-size: 2.3rem;
+    color: rgb(83, 83, 83);
+    padding: 1rem 1rem;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.login-register-page form {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.login-register-page form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.login-register-page form div label {
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+    padding-bottom: 1rem;
+}
+
+.login-register-page form div input[type="text"] {
+    height: 3rem;
+    padding: 1rem 1rem;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.login-register-page form div input[type="email"] {
+    height: 3rem;
+    padding: 1rem 1rem;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.login-register-page form div input[type="password"] {
+    height: 3rem;
+    padding: 1rem 1rem;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.login-register-page form div input[type="submit"] {
+    height: 3rem;
+    padding: 1rem 1rem;
+    background: rgb(80, 123, 253);
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+}
+
+.login-register-page form div input[type="submit"]:hover {
+    background: rgb(72, 111, 228);
+}
+
+
+/* create page */
+.login-register-page form div textarea {
+    resize: none;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.login-register-page form div select {
+    border: 1px solid rgb(218, 218, 218);
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+/* edit page */
+.login-register-page form .edit-options {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-register-page form .edit-options a {
+    padding: 0.9rem 1rem;
+    margin-left: 0.5rem;
+    background: tomato;
+}
